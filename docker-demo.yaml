@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployemnt
+metadata:
+  name: docker-demo-deployment
+  labels: 
+    apss: docker-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-demo
+  templete:
+    metadata:
+      labels:
+        app: docker-demo
+    spec: 
+      containers:
+      - name: docker-demo
+        image: 
+        ports: 
+        - containerPort: 8080 
+    
